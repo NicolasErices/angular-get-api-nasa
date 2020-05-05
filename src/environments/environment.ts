@@ -3,7 +3,21 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://api.nasa.gov',
+  api: {
+    basePath: 'mars-photos/api/v1/rovers/curiosity',
+    operation: {
+      camara: 'photos?sol=1000&camera=fhaz&api_key=',
+      page: 'photos?sol=1000&page=2&api_key=',
+      token: 'YaraFWGT9W5K6xoFqoUlwJDl5Oc6KlrICtDwEMW6'
+    }
+  },
+
+  getDataNasa: function() {
+    return `${this.baseUrl}/${this.api.basePath}/${this.api.operation.page}${this.api.operation.token}`;
+  },
+
 };
 
 /*
@@ -14,3 +28,7 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+// https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=DEMO_KEY
+// https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY

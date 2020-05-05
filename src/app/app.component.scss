@@ -1,0 +1,16 @@
+.container-cards{
+    float: left;
+    padding: 20px;
+    width:42%;
+    .card-componente{
+        width: 100%;
+        box-shadow: 3px 3px 3px #dadada;
+        float: left;
+        border-radius: 4px;
+        .img-curiosity{
+            float: left;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
