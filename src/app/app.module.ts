@@ -7,7 +7,7 @@ import { ServiceNasaService } from './services/service-nasa.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
